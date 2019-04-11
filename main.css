@@ -1,90 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
+body {
+    background: #3d566f;
+}
 
 .container {
-  position:relative;
-  z-index:1;
-  pointer-events: none;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  height: 100vh;
+  flex:1;
   align-items: center;
-  pointer-events: none;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .masthead { 
-  pointer-events: all;
   padding: 20px;
-  min-height: 300px;
-  box-shadow: 1px 2px 13px 0px #091e33;
-  background: #3d566f;
+  max-width: 600px;
   border-radius: 8px;
+  height: 80vh;
   color: white;
-  margin: 5px;
-  
+  max-height: 900px;
+  margin-left: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 
 }
 
-
-.background {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex: 1;    
-    background:white;
+h1 {
+  font-size: 4rem;
+  font-family: 'Bree Serif', serif;
+  margin-bottom: 1rem;
 }
 
-.white {
-    background:white;
-    width: 50%;
-    position: absolute;
-    left: 0;
-    transform: skew(-10deg);
-    z-index: 1;
-    animation: 3s move forwards; 
-}
-.background * {
-    height: 100vh;
-    width: 50%;
-}
-.black {
-    background: #3d566f;    position: absolute;
-    right: 0;
-    top: 0;
-    width: 70%;
-    height: 100%;
+img {
+  width: 100%;
+  max-width: 500px; 
 
 }
 
-@media (max-width: 400px) {
-    .black {
-        width: 50%;
-    }
-}
-
-@keyframes move {
-    0% {
-        transform: skew(0);
-    }
-    100% {
-        transform: skew(-15deg);        
-        
-    }
-}
 
 .maintenance {
-    width: 30vh;
-    height: 30vh;
-    position: absolute;
-    bottom: 0;
-    right:0;
+  width: 30vh;
+  height: 30vh;
+  position: absolute;
+  bottom: 0;
+  right:0;
 }
 .maintenance path {
-    fill: white;
+  fill: white;
 }
