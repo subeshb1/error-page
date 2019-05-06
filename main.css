@@ -8,11 +8,14 @@
 
 body {
   background-color: #faa74a;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%230088bb' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23d35500' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%230c7eac' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ae6a1f' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2318749d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23897e3e' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23256a8d' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%2364935e' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2331607e' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%233fa77d' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%233d566f' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%231abc9c' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201600%20900%22%3E%3Cpolygon%20fill%3D%22%230088bb%22%20points%3D%22957%20450%20539%20900%201396%20900%22%20style%3D%22%26%2310%3B%22%2F%3E%3Cpolygon%20fill%3D%22%23d35500%22%20points%3D%22957%20450%20872.9%20900%201396%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%22-60%20900%20398%20662%20816%20900%22%2F%3E%3Cpolygon%20fill%3D%22%23d35500%22%20points%3D%22337%20900%20398%20662%20816%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%221203%20546%201552%20900%20876%20900%22%2F%3E%3Cpolygon%20fill%3D%22%231abc9c%22%20points%3D%221203%20546%201552%20900%201162%20900%22%2F%3E%3Cpolygon%20fill%3D%22%230088bb%22%20points%3D%22641%20695%20886%20900%20367%20900%22%2F%3E%3Cpolygon%20fill%3D%22%231abc9c%22%20points%3D%22587%20900%20641%20695%20886%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%221710%20900%201401%20632%201096%20900%22%2F%3E%3Cpolygon%20fill%3D%22%23d35500%22%20points%3D%221710%20900%201401%20632%201365%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%221210%20900%20971%20687%20725%20900%22%2F%3E%3Cpolygon%20fill%3D%22%231abc9c%22%20points%3D%22943%20900%201210%20900%20971%20687%22%2F%3E%3C%2Fsvg%3E");
   background-attachment: fixed;
   background-size: cover;
 }
 
+body {
+  overflow: hidden;
+}
 .container {
   width: 100%;
   display: flex;
@@ -67,13 +70,14 @@ img {
 
 .button {
   text-decoration: none;
-  color:black;
-  align-self: flex-start;
-  padding: 30px;
-  border-radius: 10px;
-  font-size: 2rem;
-  background: #ffbfb6;
-  border: 5px solid #ffa0a0;
+    color: white;
+    align-self: flex-start;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 2rem;
+    background: #0088bb;
+    border: 5px solid #3d566f;
+
 }
 .button:hover {
   text-decoration: underline;
@@ -81,12 +85,13 @@ img {
 .cloud {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 500px;
   width: 100%;
   max-width: 300px;
   z-index: -1;
   right: 5vw;
+  animation: move 100s infinite;
 }
 
 @media (max-width: 750px) {
@@ -106,3 +111,16 @@ img {
     font-size: 1.6rem;
   }
 }
+
+
+@-webkit-keyframes move {
+  from {-webkit-transform: translateX(-20%);}
+  to {-webkit-transform: translateX(100vw);}
+}
+/* List of Colors
+  blue: #08b
+  green: #1abc9c
+  orange: #faa74a
+  red: #d35500
+  dark_blue: #3d566f
+*/
