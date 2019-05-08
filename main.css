@@ -11,11 +11,10 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201600%20900%22%3E%3Cpolygon%20fill%3D%22%230088bb%22%20points%3D%22957%20450%20539%20900%201396%20900%22%20style%3D%22%26%2310%3B%22%2F%3E%3Cpolygon%20fill%3D%22%23d35500%22%20points%3D%22957%20450%20872.9%20900%201396%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%22-60%20900%20398%20662%20816%20900%22%2F%3E%3Cpolygon%20fill%3D%22%23d35500%22%20points%3D%22337%20900%20398%20662%20816%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%221203%20546%201552%20900%20876%20900%22%2F%3E%3Cpolygon%20fill%3D%22%231abc9c%22%20points%3D%221203%20546%201552%20900%201162%20900%22%2F%3E%3Cpolygon%20fill%3D%22%230088bb%22%20points%3D%22641%20695%20886%20900%20367%20900%22%2F%3E%3Cpolygon%20fill%3D%22%231abc9c%22%20points%3D%22587%20900%20641%20695%20886%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%221710%20900%201401%20632%201096%20900%22%2F%3E%3Cpolygon%20fill%3D%22%23d35500%22%20points%3D%221710%20900%201401%20632%201365%20900%22%2F%3E%3Cpolygon%20fill%3D%22%233d566f%22%20points%3D%221210%20900%20971%20687%20725%20900%22%2F%3E%3Cpolygon%20fill%3D%22%231abc9c%22%20points%3D%22943%20900%201210%20900%20971%20687%22%2F%3E%3C%2Fsvg%3E");
   background-attachment: fixed;
   background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-body {
-  overflow: hidden;
-}
 .container {
   width: 100%;
   display: flex;
@@ -86,30 +85,50 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 500px;
-  width: 100%;
-  max-width: 300px;
+
+  width: 20vw;
+  max-width: 200px;
   z-index: -1;
   right: 5vw;
   animation: move 100s infinite;
 }
 
-@media (max-width: 750px) {
-  h1 {
-    font-size: 3rem;
-  }
-  .left {
-    width: 100%;
-  }
-  .main-text {
-    font-size: 1.8rem;
-  }
-  .team {
-    font-size: 2rem;
-  }
-  .button {
-    font-size: 1.6rem;
-  }
+
+@media (max-width: 1500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .main-text {
+        font-size: 1.5rem;
+      }
+      .team {
+        font-size: 1.8rem;
+      }
+      .button {
+        font-size: 1.4rem;
+        padding: 1.4rem;
+      }
+      .masthead {
+        max-width: 500px;
+      }
+      .left {
+          width: 70%;
+      }
+    }
+    @media (max-width: 1200px) {
+        body {
+            background-position: 0 100px;
+        }
+    }
+    @media (max-width: 750px) {
+        .left {
+            width: 100%;
+        }
+        body {
+        background-position: 0;
+
+        }
+
 }
 
 
@@ -117,10 +136,3 @@ img {
   from {-webkit-transform: translateX(-20%);}
   to {-webkit-transform: translateX(100vw);}
 }
-/* List of Colors
-  blue: #08b
-  green: #1abc9c
-  orange: #faa74a
-  red: #d35500
-  dark_blue: #3d566f
-*/
